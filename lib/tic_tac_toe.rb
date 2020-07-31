@@ -74,7 +74,7 @@ class TicTacToe
     user_input = gets
     index = input_to_index(user_input)
     if valid_move?(index)
-      move(index, token = "X")
+      move(index, current_player)
       display_board
     else
       puts "Invalid selection, please choose again:"
@@ -82,6 +82,17 @@ class TicTacToe
     end
     current_player
   end
+  
+#   def turn(board)
+#   puts "Please enter 1-9:"
+#   user_input = gets.strip
+#   index = input_to_index(user_input)
+#   if valid_move?(board, index)
+#       move(board, index, current_player(board))
+#       turn(board)
+#   end
+#   display_board(board)
+# end
   
   def won?
     WIN_COMBINATIONS.each do |combo|
