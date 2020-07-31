@@ -75,12 +75,12 @@ class TicTacToe
     index = input_to_index(user_input)
     if valid_move?(index)
       move(index, current_player)
-      display_board
+      turn
     else
       puts "Invalid selection, please choose again:"
       user_input = gets
     end
-    current_player
+    display_board
   end
   
 #   def turn(board)
